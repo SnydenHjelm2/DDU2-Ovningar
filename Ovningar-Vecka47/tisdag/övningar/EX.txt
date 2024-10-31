@@ -1,0 +1,4 @@
+En sida fylld med element.
+Kod som skapar referenser till alla element som har id.
+
+En sida där du kan aktivera en knapp genom att trycka på ett tangent.

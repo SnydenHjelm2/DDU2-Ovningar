@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<style>
+  #container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    margin: 100px auto;
+    width: 300px;
+    height: 300px;
+    gap: 10px;
+  }
+  #container div {
+    border: 10px solid black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+</style>
+<body>
+  <div id="container">
+    <div id="A" class="rad1 col1">A</div>
+    <div id="B" class="rad1 col2">B</div>
+    <div id="C" class="rad2 col1">C</div>
+    <div id="D" class="rad2 col2">D</div>
+  </div>
+  <script src="index.js"></script>
+</body>
+</html>

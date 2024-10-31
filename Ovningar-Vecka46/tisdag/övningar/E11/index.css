@@ -1,0 +1,25 @@
+.author {
+  border: 1px solid transparent;
+  padding: 20px;
+}
+
+body {
+  background-color: black;
+  color: whitesmoke;
+  font-family: 'Courier New', Courier, monospace;
+}
+
+.infoLine {
+  margin: 0;
+}
+
+.infoLine .value {
+  font-weight: bolder;
+}
+
+main {
+  display: flex;
+  gap: 10px;  
+}
+
+

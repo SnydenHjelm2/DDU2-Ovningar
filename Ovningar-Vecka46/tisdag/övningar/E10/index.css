@@ -1,0 +1,27 @@
+body {
+  --margin: 10px;
+  margin: var(--margin);
+  height: calc(100vh - 2 * var(--margin));
+  display: flex;
+  flex-direction: column;
+  background-color: black;
+  color: whitesmoke;
+}
+
+main {
+  flex-grow: 1;
+  display: grid; 
+}
+
+p {
+  margin: 0;
+}
+
+.cell {
+  border: 1px solid transparent;
+}
+
+.cell:hover {
+  border-color: white;
+}
+

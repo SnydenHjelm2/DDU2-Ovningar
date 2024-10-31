@@ -1,0 +1,16 @@
+
+body {
+  background-color: black;
+  color: whitesmoke;
+  font-family: 'Courier New', Courier, monospace;
+}
+
+.infoLine {
+  margin: 0;
+}
+
+.infoLine .value {
+  font-weight: bolder;
+}
+
+

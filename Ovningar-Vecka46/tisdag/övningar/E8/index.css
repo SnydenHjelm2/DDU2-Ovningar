@@ -1,0 +1,18 @@
+body {
+  --margin: 20px;
+  margin: var(--margin);
+}
+
+main {
+  height: calc(100vh - 2 * var(--margin));
+  display: grid; 
+  gap: 1px; 
+}
+
+.cell {
+  background-color: lightsalmon;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font: 9px Verdana;
+}
