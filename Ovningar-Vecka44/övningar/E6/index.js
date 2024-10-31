@@ -8,6 +8,11 @@ console.log("n2 är", n2);
 
 // Skriv koden som behövs för att variablerna n1 och n2 ska swappa sina värden
 // (du behöver skapa en ny variabel)
+var n1_swap = n1
+var n2_swap = n2
+
+n1 = n2_swap
+n2 = n1_swap
 
 
 

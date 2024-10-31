@@ -13,21 +13,22 @@ let n3 = n2;
 
 // Vad kommer att loggas på konsolen?
 console.log(n2);
-
+//2
 // Vad kommer att loggas på konsolen?
 n2 = n1;
 console.log(n2);
-
+//42
 // Vad kommer att loggas på konsolen?
 n1 = 23;
 console.log(n3);
-
+//2
 // Vad kommer att loggas på konsolen?
 n2 = 3;
 console.log(n3);
-
+//2
 // Vad kommer att loggas på konsolen?
 c1 = "Malmö";
 console.log(c1);
+//Error då man inte kan redefine:a en "const"
 
 

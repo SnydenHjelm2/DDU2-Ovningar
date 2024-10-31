@@ -15,16 +15,16 @@ let n2 = 2;
 
 // Vad kommer att loggas på konsolen?
 console.log(n1 + n2);
-
+//44
 // Vad kommer att loggas på konsolen?
 console.log(n1 * n2);
-
+//84
 // Vad kommer att loggas på konsolen?
 console.log("c1");
-
+//"c1"
 // Vad kommer att loggas på konsolen?
 console.log(c1);
-
+//"WDU"
 // Vad kommer att loggas på konsolen?
 console.log(n1 * c2);
-
+//NaN
