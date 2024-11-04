@@ -12,3 +12,6 @@ const student = {
 // Namn: Jimi Hendrix
 // Född: 27 November 2000
 // Studerar: Music Studies, Malmö Universitet
+document.querySelector("#name").textContent = `${student.first_name} ${student.last_name}`;
+document.querySelector("#birth").textContent = `${student.birth}`
+document.querySelector("#studies").textContent = `${student.program}, ${student.university}`

@@ -7,6 +7,7 @@ let someNumbers = [23, 42, 2, 3, 4, 9, 12];
 console.log(someNumbers[3] + someNumbers[4]);
 
 // Siffran 45
-
+console.log(someNumbers[1] + someNumbers[3])
 // Siffran 20
+console.log(someNumbers[0] - someNumbers[3])
 

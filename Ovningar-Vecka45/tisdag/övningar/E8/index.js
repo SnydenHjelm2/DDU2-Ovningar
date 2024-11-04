@@ -11,32 +11,33 @@ const a1 = [23, 2, 65, 1, 63, 1, 5];
 // Vad kommer att loggas på konsolen?
 a1.splice(0, 2);
 console.log(a1[23]);
-
+//undefined
 // Vad kommer att loggas på konsolen?
 console.log(a1[2]);
-
+//63
 // Vad kommer att loggas på konsolen?
 a2.push(a1[2]);
 console.log(a2[0]);
-
+//undefined
 // Vad kommer att loggas på konsolen?
 a3[0] = a2[0];
 console.log(a3[0]);
-
+//undefined
 // Vad kommer att loggas på konsolen?
 a1[2] = 42;
 console.log(a2[0]);
-
+//undefined
 // Vad kommer att loggas på konsolen?
 a1.splice(1, 2);
 console.log(a1[3]);
-
+//undefined
 // Vad kommer att loggas på konsolen?
 console.log(a1.length);
-
+//3
 // Lurigt!! Viktigt att du förstår vad som händer här
 // Vad kommer att loggas på konsolen?
 a3.push(a1);
 console.log(a3[2]);
 console.log(a3.length);
-
+//undefined - finns ingen array som heter a3
+//undefined - finns ingen array som heter a3

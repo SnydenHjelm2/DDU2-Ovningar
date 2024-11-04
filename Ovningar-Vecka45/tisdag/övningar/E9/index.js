@@ -11,17 +11,23 @@ let i = 0;
 
 // Vad kommer att loggas på konsolen?
 console.log(a1[i++]);
-
+//23
 // Vad kommer att loggas på konsolen?
 console.log(a1[i]);
-
+//2
 // Vad kommer att loggas på konsolen?
 a2.push(a1[++i]);
 console.log(a2[i]);
+//undefined
 console.log(a2[0]);
+//65
 console.log(i);
+//2
 
 // Vad kommer att loggas på konsolen?
 console.log(i++);
+//2
 console.log(++i);
+//4
 console.log(i);
+//4

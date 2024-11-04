@@ -7,5 +7,5 @@ const c4 = " ";
 // Använd konstanterna för att skriva på webbsidan (i p-elementet)
 // WDU är bäst
 // (notera mellanslagen)
-
+document.querySelector("p").textContent = `${c1} ${c2} ${c3}`
 

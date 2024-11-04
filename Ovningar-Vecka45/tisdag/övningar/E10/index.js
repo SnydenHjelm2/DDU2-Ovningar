@@ -14,22 +14,28 @@ let i2 = s1.length;
 i1 += 1;
 i1 = i1 + 1;
 console.log(s1[i1]);
+//l
 console.log(s1[i1++]);
+//l
 console.log(s1[++i1]);
+//ö
 
 
 // Vad kommer att loggas på konsolen?
 s2 = s1[0] + s1[i2-1];
 console.log(s2);
+//Mt
 
 // Uppdatera värdet i variabeln i1 så att instruktionen nedan loggar "U" på konsolen.
+i1 += 2
 console.log(s1[i1]);
-
+//ska logga "U"
 // Vad kommer att loggas på konsolen?
 s1 = "Europa";
 console.log(s2[0]);
-
+//M
 // Tilldela korrekt värde till s2 så att instruktionen nedan loggar "E" på konsolen.
+s2 = s1
 console.log(s2[0]);
 
 

@@ -20,3 +20,14 @@ Hitta längden på arrayen:
     Skriv ut antalet varor i arrayen.
     
 */
+
+var shoppingList = ["mjölk", "bröd", "ägg", "smör"]
+
+shoppingList.push("ost", "frukt")
+shoppingList.splice(1, 1)
+
+console.log(shoppingList[0])
+console.log(shoppingList[4])
+console.log(shoppingList[1])
+
+console.log(shoppingList.length)

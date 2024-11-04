@@ -35,3 +35,7 @@ const students = [
 // Name: Tina Turner
 // Born: 9 December 2000
 // Studies: Music Studies, Malmö University
+
+document.querySelector("#name").textContent = `${students[3].first_name} ${students[3].last_name}`
+document.querySelector("#birth").textContent = `${students[3].birth}`
+document.querySelector("#studies").textContent = `${students[3].program}, ${students[3].university}`
