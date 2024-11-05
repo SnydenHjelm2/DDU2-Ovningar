@@ -5,3 +5,18 @@
 // Du får inte formatera elementen annat än via JS
 
 // Lös det utan att använda innerHTML
+var body = document.querySelector("body");
+var h1 = document.createElement("h1");
+document.body.appendChild(h1);
+var header = document.querySelector("h1");
+
+var userInput = prompt("Enter a word!");
+
+body.style.height = "100vh";
+body.style.display = "flex";
+body.style.justifyContent = "center";
+body.style.alignItems = "center";
+
+header.style.fontSize = "50px";
+header.style.fontFamily = "Georgia";
+header.textContent = userInput

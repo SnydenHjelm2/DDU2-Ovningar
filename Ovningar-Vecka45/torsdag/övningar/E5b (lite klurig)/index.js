@@ -29,7 +29,33 @@ const font = "25px Georgia";
 
 // Här skriver du koden som ber användaren om tre texter,
 // skapar och formaterar divarna för att visa texten på skärmen.
+for (i=0; i<3; i++) {
+  var create = document.createElement("h1")
+  document.body.appendChild(create);
+}
 
+var body = document.querySelector("body");
+var headers = document.querySelectorAll("h1");
+
+var promt1 = prompt("Word 1");
+var promt2 = prompt("Word 2");
+var promt3 = prompt("Word 3");
+
+var promptArray = [promt1, promt2, promt3]
+
+headers[0].textContent = `${promptArray[0]}`;
+headers[1].textContent = `${promptArray[1]}`;
+headers[2].textContent = `${promptArray[2]}`;
+
+body.style.height = "100vh";
+body.style.display = "flex";
+body.style.justifyContent = "center";
+body.style.alignItems = "center";
+body.style.flexDirection = "column";
+
+for (i=0; i<headers.length; i++) {
+  headers[i].style.font = font
+}
 
 // Den här koden skapar och formaterar en knapp.
 const button = document.createElement("button");
@@ -41,8 +67,19 @@ button.style.margin = "25px 0";
 // Raderna nedan gör så att viss kod körs när användaren klickar på knappen
 button.addEventListener("click", clickHandler)
 function clickHandler () {
+   let changePos0 = promptArray[0];
+   let changePos1 = promptArray[1];
+   let changePos2 = promptArray[2];
 
-  // HÄR MÅSTE DU SKRIVA KOD!
+   promptArray[0] = changePos2
+   promptArray[1] = changePos0
+   promptArray[2] = changePos1
+
+  headers[0].textContent = `${promptArray[0]}`;
+  headers[1].textContent = `${promptArray[1]}`;
+  headers[2].textContent = `${promptArray[2]}`;
+}
+// HÄR MÅSTE DU SKRIVA KOD!
   // Skriva kodraderna som körs när användaren klickar på knappen och som gör
   // att divarna får ny text.
   // Det går bra att skapa så många nya rader som du behöver.
@@ -53,4 +90,3 @@ function clickHandler () {
 
   // Koden som körs när användaren klickar på knappen måste finnas
   // innanför måsvingarna.
-}

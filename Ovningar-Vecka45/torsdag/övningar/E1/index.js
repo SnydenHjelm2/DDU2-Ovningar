@@ -8,4 +8,4 @@ const c2 = "är";
 const c3 = "bäst";
 const c4 = " ";
 
-
+document.querySelector("p").textContent = `${c1} ${c2} ${c3}`

@@ -14,3 +14,29 @@
 // 2) genom att använda konkatenering av strängar
 
 const font = "25px Georgia";
+
+for (i=0; i<3; i++) {
+    var create = document.createElement("h1")
+    document.body.appendChild(create);
+}
+
+var body = document.querySelector("body");
+var headers = document.querySelectorAll("h1");
+
+var promt1 = prompt("Word 1");
+var promt2 = prompt("Word 2");
+var promt3 = prompt("Word 3");
+
+headers[0].textContent = `- ${promt1} - (text 1)`;
+headers[1].textContent = `- ${promt2} - (text 2)`;
+headers[2].textContent = `- ${promt3} - (text 3)`;
+
+body.style.height = "100vh";
+body.style.display = "flex";
+body.style.justifyContent = "center";
+body.style.alignItems = "center";
+body.style.flexDirection = "column";
+
+for (i=0; i<headers.length; i++) {
+    headers[i].style.font = font
+}
