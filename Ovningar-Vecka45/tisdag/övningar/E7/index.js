@@ -42,3 +42,4 @@ console.log(a3.length);
 //undefined - finns inget index 2
 //2 - Hela a1 (array 1) läggs under samma index, index 1
 console.log(a3)
+console.log(a3[1][0])

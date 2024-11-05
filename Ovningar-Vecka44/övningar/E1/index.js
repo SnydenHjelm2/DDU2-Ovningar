@@ -13,5 +13,9 @@ var s2 = s1 + p1
 console.log(s2)
 // Logga på konsolen resultatet av att multiplicera 345 gånger 123
 console.log(345 * 123)
+var log2 = 345 * 123
 
-
+document.querySelector("p").innerHTML = `check <br> console`;
+document.querySelector("p").style.color = "blue"
+document.querySelector("p").style.backgroundColor = "black"
+document.querySelector("p").style.paddingLeft = "20px"
