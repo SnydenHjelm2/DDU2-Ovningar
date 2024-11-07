@@ -7,5 +7,5 @@ let a = 10;
 for (let name of names) {
   a--;
 }
-console.log(a);
-console.log(names[a]);
+console.log(a); //7
+console.log(names[a]); //undefined

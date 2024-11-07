@@ -9,3 +9,18 @@ let names = ["Jimi", "Janis"];
 // För att kontrollera att arrayen blev korrekt:
 // 1) Logga den i slutet 
 // 2) Skriv alla element på webbsidan
+var namesx10 = [];
+for (let i = 0; i < 10; i++) {
+    namesx10.push(names[0], names[1]);
+}
+console.log(namesx10);
+
+for (let i = 0; i < 20; i++) {
+    var createP = document.createElement("p");
+    document.body.appendChild(createP);
+    var paras = document.querySelectorAll("p");
+    paras[i].textContent = namesx10[i]
+}
+
+document.body.style.display = "flex";
+document.body.style.gap = "10px";

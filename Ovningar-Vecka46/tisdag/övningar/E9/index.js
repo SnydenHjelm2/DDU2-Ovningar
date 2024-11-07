@@ -14,7 +14,7 @@ const main = document.querySelector("main");
 
 for (let key in author) {
   const p = document.createElement("p");
-  p.classList.add("infoLine");
+  p.className = "infoLine";
   p.innerHTML = `${key}: <span class="value">${author[key]}</span>`;
   main.appendChild(p);
 }

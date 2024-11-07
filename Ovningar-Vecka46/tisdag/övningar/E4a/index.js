@@ -7,4 +7,5 @@ for (i = 0; i < 3; i++) {
 console.log(i);
 
 // Studera koden ovan. Vad kommer det att loggas på konsolen?
-
+//0, 1, 2
+//3
