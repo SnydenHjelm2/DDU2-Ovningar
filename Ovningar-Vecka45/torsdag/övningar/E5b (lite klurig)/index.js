@@ -41,11 +41,10 @@ var promt1 = prompt("Word 1");
 var promt2 = prompt("Word 2");
 var promt3 = prompt("Word 3");
 
-var promptArray = [promt1, promt2, promt3]
 
-headers[0].textContent = `${promptArray[0]}`;
-headers[1].textContent = `${promptArray[1]}`;
-headers[2].textContent = `${promptArray[2]}`;
+headers[0].textContent = promt1;
+headers[1].textContent = promt2;
+headers[2].textContent = promt3;
 
 body.style.height = "100vh";
 body.style.display = "flex";
@@ -67,17 +66,17 @@ button.style.margin = "25px 0";
 // Raderna nedan gör så att viss kod körs när användaren klickar på knappen
 button.addEventListener("click", clickHandler)
 function clickHandler () {
-   let changePos0 = promptArray[0];
-   let changePos1 = promptArray[1];
-   let changePos2 = promptArray[2];
+   let changePos0 = promt1;
+   let changePos1 = promt2;
+   let changePos2 = promt3;
 
-   promptArray[0] = changePos2
-   promptArray[1] = changePos0
-   promptArray[2] = changePos1
+   promt1 = changePos2
+   promt2 = changePos0
+   promt3 = changePos1
 
-  headers[0].textContent = `${promptArray[0]}`;
-  headers[1].textContent = `${promptArray[1]}`;
-  headers[2].textContent = `${promptArray[2]}`;
+  headers[0].textContent = promt1;
+  headers[1].textContent = promt2;
+  headers[2].textContent = promt3;
 }
 // HÄR MÅSTE DU SKRIVA KOD!
   // Skriva kodraderna som körs när användaren klickar på knappen och som gör

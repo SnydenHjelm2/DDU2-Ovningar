@@ -7,5 +7,6 @@ const c1 = "WDU";
 const c2 = "är";
 const c3 = "bäst";
 const c4 = " ";
-
-document.querySelector("p").textContent = `${c1} ${c2} ${c3}`
+var p = document.createElement("p");
+document.body.appendChild(p);
+document.querySelector("p").textContent = `${c1} ${c2} ${c3}`;

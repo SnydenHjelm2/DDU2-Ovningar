@@ -1,8 +1,9 @@
 // Med hjälp endast av JS skapa en sida som den i bilden
 // Använd INTE innerHTML
-var body = document.querySelector("body");
+var body = document.body;
 var create_main = document.createElement("main");
 body.appendChild(create_main);
+
 var main = document.querySelector("main");
 var create_div1 = document.createElement("div");
 var create_div2 = document.createElement("div");
@@ -12,6 +13,7 @@ main.appendChild(create_div1);
 main.appendChild(create_div2);
 main.appendChild(create_div3);
 main.appendChild(create_div4);
+
 var divs = document.querySelectorAll("div");
 
 body.style.height = "100vh";
