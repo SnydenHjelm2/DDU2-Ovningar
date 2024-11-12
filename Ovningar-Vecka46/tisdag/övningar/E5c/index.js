@@ -15,7 +15,7 @@ for (let i = 0; i < 10; i++) {
 }
 console.log(namesx10);
 
-for (let i = 0; i < 20; i++) {
+for (let i = 0; i < namesx10.length; i++) {
     var createP = document.createElement("p");
     document.body.appendChild(createP);
     var paras = document.querySelectorAll("p");
