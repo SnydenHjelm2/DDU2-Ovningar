@@ -6,7 +6,7 @@
 // Notera att det finns en index.css men den är inte länkad från
 // index.html. Du måste skapa link-elementet från JS.
 // Kom ihåg att link-element ingår i head-elementet.
-var link = document.createElement("link");
+var link = document.createElement(`link`);
 link.rel = "stylesheet";
 link.href = "index.css";
 document.head.appendChild(link);

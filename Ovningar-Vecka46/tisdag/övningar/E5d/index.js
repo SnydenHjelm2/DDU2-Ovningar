@@ -6,9 +6,7 @@
 const names = ["Janis", "Nina", "Jimi"];
 const surnames = ["Joplin", "Simone", "Hendrix"];
 
-document.body.innerHTML = "<p></p><p></p><p></p>";
-var paras = document.querySelectorAll("p");
 
-for (let i = 0; i < 3; i++) {
-    paras[i].textContent = `${names[i]} ${surnames[i]}`;
+for (let i = 0; i < names.length; i++) {
+    document.body.innerHTML += `<p>${names[i]} ${surnames[i]}</p>`;
 }

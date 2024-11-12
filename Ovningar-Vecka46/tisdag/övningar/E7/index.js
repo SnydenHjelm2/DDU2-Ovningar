@@ -10,16 +10,11 @@ const main = document.querySelector("main");
 const n1 = 5;
 const n2 = 10;
 
-main.innerHTML = `
-<div class="column"></div>
-<div class="column"></div>
-<div class="column"></div>
-<div class="column"></div>
-<div class="column"></div>`;
 
-var columns = document.querySelectorAll(".column");
 
 for (i=0; i<n1; i++) {
+    main.innerHTML += `<div class="column"></div>`;
+    var columns = document.querySelectorAll(".column");
     for (x=0; x<n2; x++) {
         let paras = document.createElement("p");
         paras.textContent = `${i + 1} x ${x + 1} = ${(i + 1) * (x + 1)}`;
