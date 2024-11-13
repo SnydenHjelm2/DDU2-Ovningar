@@ -59,7 +59,7 @@ for (let city of cities) {
   population = parseInt(population);
   if (city.name.toLowerCase() === userInput.toLowerCase()) {
     console.log(`${city.name} is in ${city.country} and has ${population} thousand inhabitants`);
-    found = true;
+    cityFound = true;
     break; 
   } 
 }
