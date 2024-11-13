@@ -7,6 +7,15 @@
 // Se bilden
 
 for (let i = 0; i < 1000; i++) {
+    if (i === 2) {
+        console.log(i);
+    } else if (i === 4) {
+        console.log(i);
+    } else if (i === 6) {
+        console.log(i);
+    } else {
+        continue;
+    }
 }
 
 

@@ -6,3 +6,16 @@
 
 // Se videon.
 
+var userInput = prompt("Number please");
+userInput = parseInt(userInput);
+
+if (isNaN(userInput)) {
+    document.body.innerHTML += `<p>You did not enter a number, try again!</p>`;
+} else {
+    for (i=2; i<=99; i++) {
+        if (userInput % i === 0) {
+            document.body.innerHTML += `<p>${userInput} är delbart med ${i}</p>`;
+        }
+    }
+}
+

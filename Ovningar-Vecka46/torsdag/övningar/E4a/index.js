@@ -10,3 +10,30 @@
 // måste alla texter komma på webbsidan.
 // Se videon.
 
+var userInput = prompt("Number please!");
+userInput = parseInt(userInput);
+
+if (isNaN(userInput)) {
+    document.body.innerHTML += `<p>You did not enter a number, try again!</p>`;
+} else {
+    if (userInput % 2 === 0) {
+        document.body.innerHTML += `<p>${userInput} är delbart med 2</p>`;
+        if (userInput % 3 === 0) {
+            document.body.innerHTML += `<p>${userInput} är delbart med 3</p>`;
+            if (userInput % 4 === 0) {
+                document.body.innerHTML += `<p>${userInput} är delbart med 4</p>`;
+            }
+        } else if (userInput % 4 === 0) {
+            document.body.innerHTML += `<p>${userInput} är delbart med 4</p>`;
+        }
+    } else if (userInput % 3 === 0) {
+        document.body.innerHTML += `<p>${userInput} är delbart med 3</p>`;
+        if (userInput % 4 === 0) {
+            document.body.innerHTML += `<p>${userInput} är delbart med 4</p>`;
+        }
+    } else if (userInput % 4 === 0) {
+        document.body.innerHTML += `<p>${userInput} är delbart med 4</p>`;
+    } else {
+        document.body.innerHTML += `<p>${userInput} är inte delbart med 2, 3 eller 4</p>`;
+    }
+}

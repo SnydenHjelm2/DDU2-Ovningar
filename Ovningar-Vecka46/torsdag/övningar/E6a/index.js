@@ -1,12 +1,18 @@
 // Koda ett program som loggar asterisker enligt videon.
 
-const a = prompt("En siffra please");
 
-for (let i = 1; i <= a; i++) {
-  let string = "";
-  for (let j = 0; j < i; j++) {
-    string += "*";
+var userInput = prompt("Number please!");
+userInput = parseInt(userInput);
+
+if (isNaN(userInput)) {
+  console.log("I said number, please :/");
+} else {
+  for(i=1; i<=userInput; i++) {
+    var stars = "";
+    for (x=1; x<=i; x++) {
+      stars += "*";
+    }
+    console.log(stars);
   }
-  console.log(string);
 }
 

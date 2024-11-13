@@ -6,3 +6,5 @@ if (a == 42) {
 } else {
   console.log(a + 23);
 }
+
+//"MAU23"
