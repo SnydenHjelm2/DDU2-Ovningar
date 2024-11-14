@@ -6,11 +6,11 @@
 
 var userInput = prompt("Enter a word or Sentance");
 
-if (userInput[0] === "A") {
+if (userInput[0].toUpperCase() === "A") {
     console.log("Texten börjar med ett A");
-} else if (userInput[0] === "B") {
+} else if (userInput[0].toUpperCase() === "B") {
     console.log("Texten börjar med ett B");
-} else if (userInput[0] === "C") {
+} else if (userInput[0].toUpperCase() === "C") {
     console.log("Texten börjar med ett C");
 } else {
     console.log("Texten börjar inte med ett A, B eller C");

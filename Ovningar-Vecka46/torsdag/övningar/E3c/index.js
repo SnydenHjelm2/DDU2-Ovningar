@@ -6,7 +6,7 @@ var userInput = prompt("String please");
 var count = 0;
 
 for (i=0; i<userInput.length; i++) {
-    if (userInput[i] === "a") {
+    if (userInput[i].toLowerCase() === "a") {
         count++;
     } else {
         continue;

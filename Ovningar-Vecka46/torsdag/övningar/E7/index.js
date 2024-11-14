@@ -6,7 +6,7 @@ for (let i = 10; i > 0; i--) {
   console.log(i);
 }
 //ingenting, finns ingen console.log
-//OM console.log finns kommer 10, 9, 8 , 7, 5 , 4
+//OM console.log finns kommer 10, 9, 8, 7, 5, 4
 for (let i = 23; i > 21; i--) {
   if (i == 3) { break; }
   if (i == 6) { continue; }

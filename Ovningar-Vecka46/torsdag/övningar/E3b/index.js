@@ -9,8 +9,8 @@
 for (let i = 0; i < 1000; i++) {
     if (i % 2 === 0 && i <= 222 && i > 0) {
         console.log(i)
-    } else {
-        continue;
+    } else if (i > 222) {
+        break;
     }
 }
 

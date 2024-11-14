@@ -5,7 +5,7 @@
 
 var userInput = prompt("Enter a Word or Sentance");
 
-if (userInput[0] === "A") {
+if (userInput[0].toUpperCase() === "A") {
     console.log("Texten startar med ett A");
 } else {
     console.log("Texten startar inte med A");
