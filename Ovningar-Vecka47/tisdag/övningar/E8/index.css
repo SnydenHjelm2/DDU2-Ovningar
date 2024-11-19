@@ -1,0 +1,22 @@
+body {
+  font: 23px monospace;
+}
+
+main {
+  display: grid;
+  gap: 10px;
+  grid-template-columns: repeat(4, 1fr);
+}
+
+.name {
+  text-align: center;
+  align-self: center;
+  display: flex;
+  gap: 5px;
+  justify-content: center;
+}
+
+.name div {
+  padding: 6px;
+  border: 1px solid black;
+}

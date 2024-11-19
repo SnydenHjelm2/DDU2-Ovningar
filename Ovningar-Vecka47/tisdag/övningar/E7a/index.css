@@ -1,0 +1,21 @@
+body {
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+h1 {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  font-size: 70px;
+  font-family: monospace;
+}
+
+h1 div {
+  padding: 20px;
+  border: 1px solid black;
+  border-radius: 10px;
+}
