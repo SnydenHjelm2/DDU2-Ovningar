@@ -5,6 +5,13 @@ Studera koden nedan.
 så att koden fungerar som den ska.
 
 */
+function f1(word) {
+   if (word[0].toLowerCase() === "a") {
+      return true;
+   } else {
+      return false;
+   }
+}
 
 
 let a = prompt("A word, please");

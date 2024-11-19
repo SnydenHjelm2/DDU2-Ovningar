@@ -29,3 +29,18 @@ klar i huvudet över faktumet att det finns olika typer av värden.
   på prompten, så ska ju "Målet är att bli en duktig utvecklare" loggas fyra gånger.
   Hur åstadkommer vi det i koden?
 */
+
+var userInput = prompt("Number please!");
+userInput = parseInt(userInput);
+
+function isNumber(num) {
+   if (isNaN(num)) {
+      console.log("Fel argument: Det måste vara en siffra!");
+   } else {
+      for (i=0; i<num; i++) {
+         console.log("Målet är att bli en duktig utvecklare");
+      }
+   }
+}
+
+isNumber(userInput);

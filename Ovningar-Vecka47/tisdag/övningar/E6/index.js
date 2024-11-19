@@ -12,3 +12,12 @@ Testa funktionen genom att lägga till en bildfil i mappen och, med
 hjälp av din funktion, skapa ett <img> som visar den bilden.
 
 */
+function showImg(path, parent) {
+  parent = document.querySelector(parent);
+  parent.innerHTML += `<img src="images/${path}">`;
+}
+
+var userPath = prompt("image name + file end");
+var userParent = prompt("where to place it? (html tag)");
+
+showImg(userPath, userParent);
