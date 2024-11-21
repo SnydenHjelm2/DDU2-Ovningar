@@ -170,7 +170,7 @@ for (let objects of people) {
     blackEyedPeople.push(object);
   }
 }
-console.log(Analysis.stringOfNamesFrenchStyle(blackEyedPeople));
+console.log("black eyed people:", Analysis.stringOfNamesFrenchStyle(blackEyedPeople));
 // - För- och efternamn på den äldsta personen som har blå ögon
 let blueEyedPeople = [];
 for (let objects of people) {
@@ -188,7 +188,7 @@ for (let objects of people) {
     oldestBlueName = `${objects.firstname} ${objects.lastname}`;
   }
 }
-console.log(oldestBlueName);
+console.log("Oldest blue eyed:", oldestBlueName);
 // - Förnamnet och åldern på den äldsta personen som bor i Toulouse
 let peopleInToulouse = [];
 for (let objects of people) {
@@ -199,7 +199,7 @@ for (let objects of people) {
 
 let oldestInToulouse = Analysis.oldest(peopleInToulouse);
 
-console.log(oldestInToulouse.firstname, oldestInToulouse.age);
+console.log("Oldest in Toulouse:", oldestInToulouse.firstname, oldestInToulouse.age);
 // - En sträng med namnet (French style) på alla som har svarta ögon och svart hår
 let blackEyesHair = [];
 for (let objects of people) {
@@ -211,7 +211,7 @@ for (let objects of people) {
     blackEyesHair.push(object);
   }
 }
-console.log(Analysis.stringOfNamesFrenchStyle(blackEyesHair));
+console.log("Black eyes and hair:", Analysis.stringOfNamesFrenchStyle(blackEyesHair));
 // - En sträng med namn + längd ("Éléonore (162cm), Maëlys (158cm),... ") med alla personer med gröna ögon, från längst till kortast
 let nameAndHeight = [];
 for (let objects of people) {
@@ -230,7 +230,7 @@ let sortedHeights = Analysis.sortByLength(nameAndHeight);
 for (i=0; i<sortedHeights.length; i++) {
   for(j=0; j<nameAndHeight.length; j++) {
     if (sortedHeights[i] === nameAndHeight[j].height) {
-      console.log(`${nameAndHeight[j].firstname} (${sortedHeights[i]}cm)`);
+      console.log(`Green eyed, in order of height: ${nameAndHeight[j].firstname} (${sortedHeights[i]}cm)`);
     }
   } 
 }
