@@ -74,12 +74,17 @@ Analysis.stringOfFirstNames = function (array) {
   // Denna metod tar emot en array som argument och returnerar EN sträng med alla förnamn i alfabetisk ordning, separerade med komma
   // Alltså: "Théotime, Éléonore, ..." (notera mellanslaget efter komma)
   let nameString = "";
+  let namesArray = [];
   for (let names of array) {
-    nameString += `${names.firstname}, `;
+    namesArray.push(names.firstname);
   }
+  namesArray.sort();
+  nameString = namesArray.join(", ");
+  
 
   return nameString;
 }
+console.log(Analysis.stringOfFirstNames(people));
 
 // Andra metoder att koda:
 
