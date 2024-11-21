@@ -78,7 +78,11 @@ Analysis.stringOfFirstNames = function (array) {
   for (let names of array) {
     namesArray.push(names.firstname);
   }
-  namesArray.sort();
+
+  function compareFirstNames(a, b) {
+    return a.localeCompare(b, "fr");
+  }
+  namesArray.sort(compareFirstNames);
   nameString = namesArray.join(", ");
   
 
