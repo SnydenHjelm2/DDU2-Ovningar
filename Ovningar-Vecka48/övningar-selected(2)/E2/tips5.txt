@@ -1,0 +1,8 @@
+Det finns olika sätt att lösa det på...
+Ett som är ganska straightforward är att först skapa en ny array (unique)
+Efter det loopa igenom arrayen som skickas som argument.
+  För varje ord (varje iteration):
+    Om ordet inte finns i det nya arrayen, pusha till den.
+    Annars gå till nästa ord.
+
+Notera att exvis "Det" och "det" anses vara samma ord.

@@ -1,0 +1,1 @@
+Utgå från listUnique och skapa en ny array med alla ord som har n bokstäver.

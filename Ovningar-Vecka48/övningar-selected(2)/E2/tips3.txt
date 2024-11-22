@@ -1,0 +1,12 @@
+Ett sätt att lösa det är att skapa en ny array där varje element är
+ett objekt {word: "ordet_i_fråga", counter: x} där counter representerar
+antalet ggr som ordet förekommer.
+
+Arrayen skapas genom att loopa igenom arrayen med alla orden och för varje
+ord kontrollera om det redan finns ett objekt i den nya arrayen vars egenskap
+word har samma värde som ordet. 
+  Om ja => incrementera counter i det objektet
+  Om nej => skapa och pusha ett nytt objekt med {word: ord, counter: 1}
+
+Sen gör du som i frågan innan, du sorterar arrayen enligt times-egenskapen
+och tar de n första elementen.

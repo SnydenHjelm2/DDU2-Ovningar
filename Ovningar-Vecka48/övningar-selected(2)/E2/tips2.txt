@@ -1,0 +1,2 @@
+Det bästa sättet att lösa detta är att sortera arrayen från längst till kortast och sedan
+ta de n första elementen från arrayen.

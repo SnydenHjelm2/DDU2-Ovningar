@@ -1,0 +1,41 @@
+Det enklaste sättet att lösa (nästan) alla frågor i denna övning
+är att göra om texten till en array som innehåller alla orden, i
+den ordning de förekommer i texten.
+
+Så de första elementen i arrayen är:
+["RÖDA", "RUMMET", "SKILDRINGAR", "UR", "ARTIST", "OCH", "FÖRFATTARLIVET", "Det", "var", etc]
+
+För att skapa en sån array:
+
+  STEG 1:
+    Extrahera all text från sina HTML-element och placera den i en variabel.
+    (All text finns i p-element)
+
+  STEG 2:
+    "Splitta" texten i en array som innehåller alla ord.
+    Notera att det kommer att skapas en hel del element i arrayen som är 
+    tomma strängar eller line jumps (representeras som \n).    
+    Notera att tecken som kommer med riktiga ord men som inte
+    är bokstäver ska tas bort (utropstecken, komma, mfl)
+    
+    Texten:
+      Det var fint, men inte
+      jättesoligt!
+
+    Ska resultera i arrayen
+    ["Det", "var", "fint", "men", "inte" "jättesoligt"]
+        
+    
+    Det kan vara lurigt att få till så ni har fått en lösning längre ner i filen.
+    Jag har inte kollat att det fungerar helt felfritt. Det skulle exvis bli problem
+    med strängen "Vad??", men sånt verkar inte förekomma särskilt mycket i texten.
+    
+
+
+
+
+
+
+
+
+
