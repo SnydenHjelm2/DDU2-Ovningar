@@ -194,13 +194,7 @@ for (let objects of people) {
 }
 console.log("Oldest blue eyed:", oldestBlueName);
 // - Förnamnet och åldern på den äldsta personen som bor i Toulouse
-let peopleInToulouse = [];
-for (let objects of people) {
-  if (objects.city === "Toulouse") {
-    peopleInToulouse.push(objects);
-  }
-}
-
+let peopleInToulouse = Analysis.livesIn(people, "Toulouse");
 let oldestInToulouse = Analysis.oldest(peopleInToulouse);
 
 console.log("Oldest in Toulouse:", oldestInToulouse.firstname, oldestInToulouse.age);
@@ -252,15 +246,9 @@ if (Analysis.someThatLiveIn(allBlueEyed, "Lyon")) {
 }
 //   "Det finns ingen person med blå ögon i Lyon" annars.
 // - Vilken stad (av Marseille eller Toulouse) som har flest personer
-let marseillePpl = [];
-let toulousePpl = [];
-for (let objects of people) {
-  if (objects.city === "Marseille") {
-    marseillePpl.push(objects);
-  } else if (objects.city === "Toulouse") {
-    toulousePpl.push(objects);
-  }
-}
+let marseillePpl = Analysis.livesIn(people, "Marseille");
+let toulousePpl = Analysis.livesIn(people, "Toulouse");
+
 if (marseillePpl.length > toulousePpl.length) {
   console.log("Marseille har fler personer");
 } else if (toulousePpl.length > marseillePpl.length) {
@@ -288,12 +276,8 @@ Analysis.averageLength = function(array) {
 
 console.log("Avg height of all", Analysis.averageLength(Analysis.sortByLength(people)));
 // Vad är medelländgen av alla som bor i Lyon?
-let lyonPpl = [];
-for (let objects of people) {
-  if (objects.city === "Lyon") {
-    lyonPpl.push(objects);
-  }
-}
+let lyonPpl = Analysis.livesIn(people, "Lyon");
+
 
 console.log("Avg height of Lyon inhabitants",Analysis.averageLength(Analysis.sortByLength(lyonPpl)));
 // Vad är medelländgen av alla som har rött hår?
