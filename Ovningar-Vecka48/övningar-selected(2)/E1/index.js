@@ -101,12 +101,52 @@ function sameShopAndCity(receipts) {
                 const secondTime = {hour: secondReceipt.time.hour, min: secondReceipt.time.min}; 
 
                 if (firstDate.month === secondDate.month && firstDate.day === secondDate.day && (firstTime.hour != secondTime.hour || firstTime.min != secondTime.min)) {
-                    repeats.push({firstReceipt, secondReceipt})
+                    repeats.push({first:firstReceipt, second:secondReceipt});
                 }
             }
         }
     }
     return repeats;
+}
+let repeatsResult = sameShopAndCity(receipts);
+function convertToPrintable(repeats, people, cities, etb) {
+    let result = [];
+
+    for (let repeat of repeats) {
+        let obj = {};
+        for (let peep of people) {
+            if (peep.id === repeat.first.personID) {
+                obj.peopleName = peep.name;
+                break;
+            }
+        }
+
+        for (let city of cities) {
+            if (city.id === repeat.first.cityID) {
+                obj.cityName = city.name;
+                break;
+            }
+        }
+
+        for (let shop of etb) {
+            if (shop.id === repeat.first.establishmentID) {
+                obj.etbName = shop.name;
+                break;
+            }
+        }
+        obj.month = repeat.first.date.month;
+        obj.day = repeat.first.date.day;
+
+        result.push(obj);
+    }
+
+    return result;
+}
+
+let converted = convertToPrintable(repeatsResult, people, cities, establishments);
+
+for (let convert of converted) {
+    console.log(`${convert.peopleName} har handlat flera gånger på ${convert.etbName} i ${convert.cityName} under den ${convert.day}/${convert.month}`);
 }
 // - Vad är det högsta som har spenderats på en affär under en månad, och vid vilken affär (inkl stad) skedde det?
 function mostSpent(receipts, cities, etb) {
@@ -189,8 +229,11 @@ function leastPopularShop(receipts, etb) {
                 count++;
             }
         }
-        if (count > leastVisits) {
+        if (leastVisits === 0) {
             leastVisits = count;
+            leastVisitedShop = shop;
+        } else if (count < leastVisits) {
+            eastVisits = count;
             leastVisitedShop = shop;
         }
     }
