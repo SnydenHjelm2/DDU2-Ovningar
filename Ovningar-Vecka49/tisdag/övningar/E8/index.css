@@ -1,0 +1,16 @@
+.hero {
+  display: flex;
+  gap: 10px;
+  padding: 10px;
+  border: 1px solid grey;
+  margin-top: 3px;
+}
+
+.hero .color {
+  flex-basis: 20px;
+}
+
+#results {
+  margin-top: 20px;
+}
+

@@ -1,0 +1,45 @@
+body {
+  text-align: center
+}
+
+.control {
+  margin-top: 10px;
+  background-color: lightgrey;
+  padding: 5px;
+  display: flex;
+  justify-content: center;
+  align-items: baseline;
+  gap: 20px;
+}
+
+.control * {
+  font: 16px monospace;
+}
+
+#doSum {
+  margin-right: 30px;
+}
+
+#nNumbers {
+  width: 50px;
+  text-align: center;
+}
+
+#numbers {
+  margin-top: 20px;
+
+  display: grid;
+  grid-template-columns: repeat(15,1fr);
+  grid-auto-rows: 50px;
+  gap: 5px;
+
+  font-size: 20px;
+}
+
+#numbers div {
+  border: 1px solid black;
+  /* align-self: center; */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}

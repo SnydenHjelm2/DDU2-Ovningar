@@ -1,0 +1,23 @@
+
+#controls {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+}
+
+#message {
+  font-family: 'Courier New', Courier, monospace;
+  text-align: center;  
+  padding: 10px;
+}
+
+#divs {
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  grid-auto-rows: 30px;
+  gap: 10px;
+}
+
+#divs div {
+  border-radius: 10px;
+}

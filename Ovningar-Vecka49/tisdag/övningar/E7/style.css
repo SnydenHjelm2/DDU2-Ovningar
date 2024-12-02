@@ -1,0 +1,33 @@
+body {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+main {
+    height: 400px;
+    display: grid;
+    grid-template-columns: auto 1fr auto;
+    grid-template-areas: "minus wrapper plus";
+}
+
+#wrapper {
+    grid-area: wrapper;
+    display: flex;
+}
+
+#minus {
+    grid-area: minus;
+}
+
+#plus {
+    grid-area: plus;
+}
+
+.yellow {
+    width: 10px;
+    background-color: yellow;
+    flex-grow: 1;
+    flex-basis: 0;
+}
