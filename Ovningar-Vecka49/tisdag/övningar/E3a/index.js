@@ -2,9 +2,18 @@
 // När användaren skriver en siffra och trycker på enter så läggs
 // siffran till i #numbers.
 function addNumber(e) {
+    console.log(e)
     if (e.key === "Enter") {
         let userInput = input.value;
-        nums.textContent += userInput;
+        userInput = parseInt(userInput);
+
+        if(isNaN(userInput)) {
+            return false;
+        } else {
+            let newNum = document.createElement("div");
+            newNum.textContent = userInput;
+            nums.appendChild(newNum);
+        }
     }
 }
 

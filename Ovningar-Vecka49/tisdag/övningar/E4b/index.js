@@ -42,6 +42,20 @@ input.addEventListener("keyup", function nums (e) {
   }
 });
 
+input.addEventListener("keyup", function(e) {
+  if (e.key === "Enter" && e.ctrlKey === true){
+    let allNumbers = document.querySelectorAll("#numbers div");
+  let totalSum = 0;
+  for (i=0; i<allNumbers.length; i++) {
+    let currentNumber = allNumbers[i].textContent;
+    currentNumber = parseInt(currentNumber);
+    totalSum += currentNumber;
+  }
+
+  sum.textContent = totalSum;
+  }
+})
+
 
 const empty = document.querySelector("#empty");
 empty.addEventListener("click", function remove() {newNumbers(input.value, false)});

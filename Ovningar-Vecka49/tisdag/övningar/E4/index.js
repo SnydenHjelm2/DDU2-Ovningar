@@ -38,14 +38,14 @@ newNumbers(60, true);
 
 // 1) Se till att det skapas nya siffror när användaren klickar på knappen "Skapa nya siffror". Den ska skapa 60 siffror.
 const evenMoreNumber = document.querySelector("#new");
-evenMoreNumber.addEventListener("click", function more() {newNumbers(60, true);})
+evenMoreNumber.addEventListener("click", function() {newNumbers(60, true);})
 // 2) Se till att gridden töms (bara visar bindestreck) när användaren klickar på knappen "Töm"
 const empty = document.querySelector("#empty");
-empty.addEventListener("click", function bye() {newNumbers(60, false)});
+empty.addEventListener("click", function() {newNumbers(60, false)});
 // 3) Se till att knappen "Addera alla siffror" fungerar, summan ska skrivas i <span id="sum">
 const doSum = document.querySelector("#doSum");
 const sum = document.querySelector("#sum");
-doSum.addEventListener("click", function addSum() {
+doSum.addEventListener("click", function() {
   let allNumbers = document.querySelectorAll("#numbers div");
   let finalSum = 0;
   for (i=0; i<allNumbers.length; i++) {
@@ -59,7 +59,7 @@ doSum.addEventListener("click", function addSum() {
 // 4) Se till att knappen "Högsta siffran" fungerar
 const findMax = document.querySelector("#findMax");
 const max = document.querySelector("#max");
-findMax.addEventListener("click", function maxxing() {
+findMax.addEventListener("click", function() {
   let allNumbers = document.querySelectorAll("#numbers div");
   let biggestNum = 0;
 
@@ -80,7 +80,7 @@ findMax.addEventListener("click", function maxxing() {
 // 4) Se till att knappen "Lägsta siffran" fungerar
 const findMin = document.querySelector("#findMin");
 const min = document.querySelector("#min");
-findMin.addEventListener("click", function mining() {
+findMin.addEventListener("click", function() {
   let allNumbers = document.querySelectorAll("#numbers div");
   let smallestNum = Infinity;
 
