@@ -1,0 +1,26 @@
+main {
+    display: flex;
+    gap: 10px;
+}
+
+.card {
+    border: 2px solid black;
+    height: 200px;
+    width: 125px;
+    display: grid;
+    grid-template-columns: 1fr;
+    align-items: center;
+}
+
+.card img {
+    height: 70px;
+    width: 70px;
+}
+
+.card img, .card h2 {
+    justify-self: center;
+}
+
+.red h2 {
+    color: red;
+}
