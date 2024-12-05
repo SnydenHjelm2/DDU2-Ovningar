@@ -14,3 +14,5 @@ function createCards() {
 
     return deckOfCards;
 }
+
+console.log(createCards());

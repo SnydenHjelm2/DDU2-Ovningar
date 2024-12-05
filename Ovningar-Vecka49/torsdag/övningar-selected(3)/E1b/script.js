@@ -1,8 +1,10 @@
 const input = document.querySelector("input");
 const p = document.querySelector("p");
 
-let randomNum = Math.floor(Math.random() * 6);
+let randomNum = Math.floor(Math.random() * 5) + 1;
 console.log(randomNum);
+
+input.value = "";
 
 function userGuess(guess) {
     if (parseInt(guess) === randomNum) {

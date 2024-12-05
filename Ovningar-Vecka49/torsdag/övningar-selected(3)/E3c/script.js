@@ -33,11 +33,11 @@ function getHand(nCards, deck) {
     return obj;
 }
 
-function displayCards(hand) {
+function displayCards(hand, where) {
     for (let card of hand) {
         let displayCard = document.createElement("div");
         displayCard.classList.add("card");
-        main.appendChild(displayCard);
+        where.appendChild(displayCard);
 
         if (card.valueOfCard === 13) {
             displayCard.innerHTML = `<h2>K</h2><img src="../E3b/images/${card.color}.png">`;
@@ -80,11 +80,39 @@ function hasPair(hand) {
             }
         }
     }
-
     return false;
 }
 
+function hasKings(hand) {
+    let count = 0;
+    for (let card of hand) {
+        if (card.valueOfCard === 13) {
+            count++;
+        }
+    }
+    if (count >= 2) {
+        return true;
+    } else {
+        return false;
+    }
+}
+
 const main = document.querySelector("main");
+const p = document.querySelector("p");
+const p2 = document.querySelector("#two");
 let makeHand = getHand(5, createCards());
 let aHand = makeHand.hand;
 console.log(aHand);
+displayCards(aHand, main);
+
+if (hasPair(aHand)) {
+    p.textContent = "This hand has a pair!"
+} else {
+    p.textContent = "This hand does not have a pair :(";
+}
+
+if (hasKings(aHand)) {
+    p2.textContent = "This hand has 2 or more kings!";
+} else {
+    p2.textContent = "This hand has 1 or less kings :/";
+}

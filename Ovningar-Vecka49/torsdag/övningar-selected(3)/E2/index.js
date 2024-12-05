@@ -21,4 +21,11 @@ const subduedColors = [
 ];
 
 let randomColor = randomElement(subduedColors);
-backgroundDOM.style.backgroundColor = randomColor;
+backgroundDOM.style.gridTemplate = `repeat(${nRows}, 1fr) / repeat(${nCols}, 1fr)`;
+for (i=0; i<nRows; i++) {
+  for (j=0; j<nCols; j++) {
+    let newDiv = document.createElement("div");
+    newDiv.style.backgroundColor = randomElement(subduedColors);
+    backgroundDOM.appendChild(newDiv);
+  }
+}

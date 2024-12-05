@@ -1,6 +1,7 @@
-main {
+main, #hand2, #hand3 {
     display: flex;
     gap: 10px;
+    margin-bottom: 5px;
 }
 
 .card {

@@ -1,13 +1,11 @@
-let randomNum = Math.floor(Math.random() * 6);
+let randomNum = Math.floor(Math.random() * 5) + 1;
 console.log(randomNum)
 
-let guessedRight = false;
-
-while(!guessedRight) {
+while(true) {
     let userInput = prompt("number pls (1-5)");
 
     if(parseInt(userInput) === randomNum) {  
-        guessedRight = true;
+        break;
     } else {
         continue;
     }

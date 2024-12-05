@@ -17,27 +17,26 @@ function createCards() {
 
 function getHand(nCards, deck) {
     let hand = [];
-    let deckAfterHand = [];
 
     for (i=0; i<nCards; i++) {
         let num = Math.floor(Math.random() * deck.length);
         hand.push(deck[num]);
         deck.splice(num, 1);
     }
-    deckAfterHand.push(deck);
+
     let obj = {
         hand: hand,
-        outDeck: deckAfterHand
+        outDeck: deck
     }
 
     return obj;
 }
 
-function displayCards(hand) {
+function displayCards(hand, where) {
     for (let card of hand) {
         let displayCard = document.createElement("div");
         displayCard.classList.add("card");
-        main.appendChild(displayCard);
+        where.appendChild(displayCard);
 
         if (card.valueOfCard === 13) {
             displayCard.innerHTML = `<h2>K</h2><img src="images/${card.color}.png">`;
@@ -69,6 +68,22 @@ function displayCards(hand) {
 }
 
 const main = document.querySelector("main");
-let makeHand = getHand(5, createCards());
+const hand2 = document.querySelector("#hand2");
+const hand3 = document.querySelector("#hand3")
+let deck = createCards();
+let makeHand = getHand(5, deck);
+console.log(makeHand);
+
 let aHand = makeHand.hand;
 console.log(aHand);
+displayCards(aHand, main);
+
+// let getNewHand = getHand(5, makeHand.outDeck);
+// let newHand = getNewHand.hand;
+// console.log(newHand);
+// displayCards(newHand, hand2);
+
+// let getThirdHand = getHand(5, getNewHand.outDeck);
+// let thirdHand = getThirdHand.hand;
+// console.log(thirdHand);
+// displayCards(thirdHand, hand3);
