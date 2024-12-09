@@ -1,0 +1,24 @@
+#controls {
+  padding: 10px;
+  text-align: center;
+}
+
+#list {  
+  display: grid;
+  gap: 3px;
+  grid-template-columns: repeat(7, 1fr);
+}
+
+#list .city {
+  border: 1px solid black;
+  padding: 3px;
+  text-align: center;
+}
+
+.markTarget {
+  background-color: yellow;
+}
+
+.markClose {
+  background-color: orange;
+}
