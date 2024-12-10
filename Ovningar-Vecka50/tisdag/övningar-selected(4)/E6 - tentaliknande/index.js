@@ -9,7 +9,7 @@ const orderCities = (cities) => {
     return orderedCities;
 }
 
-function createSelect(cities) {
+const createSelect = (cities) => {
     const createSelect = document.createElement("select");
     createSelect.name = "City";
     controls.appendChild(createSelect);
@@ -80,15 +80,15 @@ const getTargetCityNeighbors = (target, distances, cities) => {
     return lessThan300km;
 }
 
-const markNeighbors = (neighbors, cities) => {
-    for (let city of cities) {
-        city.classList.remove("markClose");
+const markNeighbors = (neighbors, elements) => {
+    for (let element of elements) {
+        element.classList.remove("markClose");
     }
 
     for (let neigbor of neighbors) {
-        for(let city of cities) {
-            if (neigbor.neighborID === parseInt(city.id)) {
-                city.classList.add("markClose");
+        for(let element of elements) {
+            if (neigbor.neighborID === parseInt(element.id)) {
+                element.classList.add("markClose");
             }
         }
     }

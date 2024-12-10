@@ -58,6 +58,13 @@ const getCountriesByLanguage = (language) => {
 }
 
 
+const getCountryByID = (id) => {
+    for (let country of COUNTRIES) {
+        if (country.id === id) {
+            return country;
+        }
+    }
+}
 
 
 //    Koda en funktion som har en parameter (title) och returnerar namnet på
@@ -67,6 +74,7 @@ const getAuthorCountryByTitle = (title) => {
     for (let book of BOOKS) {
         if (book.title === title) {
             authorID = book.author_id;
+            break;
         }
     }
 
@@ -74,6 +82,7 @@ const getAuthorCountryByTitle = (title) => {
     for (let author of AUTHORS) {
         if (author.id === authorID) {
             authorComesFrom = author.country_of_origin_id;
+            break;
         }
     }
 
@@ -81,10 +90,9 @@ const getAuthorCountryByTitle = (title) => {
     for (let country of COUNTRIES) {
         if (country.id === authorComesFrom) {
             countryName = country.name;
+            return countryName;
         }
     }
-
-    return countryName;
 }
 
 
@@ -97,6 +105,7 @@ const getTitlesFromCountry = (countryName) => {
     for (let country of COUNTRIES) {
         if (country.name === countryName) {
             targetCountryID = country.id;
+            break;
         }
     }
 
@@ -118,3 +127,9 @@ const getTitlesFromCountry = (countryName) => {
 
     return titles;
 }
+
+console.log("All books from 2011:", getBooksByYear(2011));
+console.log("Authors from Spain:", getAuthorsByCountry("Spain"));
+console.log("All countries that speak Spanish:", getCountriesByLanguage("Spanish"));
+console.log("The author of 'Rayuela' comes from:", getAuthorCountryByTitle("Rayuela"));
+console.log("All titles of books written by authors from UK:", getTitlesFromCountry("UK"));
