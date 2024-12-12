@@ -1,0 +1,60 @@
+#buttons {
+  margin: 15px 0 5px;
+  display: flex;
+  gap: 5px;
+  justify-content: center;
+}
+
+#deck {
+  flex-grow: 1;
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--cardgap);
+}
+
+#hands {
+  flex-basis: 260px;
+  flex-shrink: 0;
+  display: flex;
+  flex-direction: column;
+  gap: var(--cardgap);
+}
+
+.hand {
+  display: flex;
+  gap: var(--cardgap);  
+}
+
+.card {
+  flex-basis: 40px;
+  padding: 5px;
+  border: 1px solid black;
+  border-radius: 5px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.card.CB, .card.SP { color: black; }
+.card.DM, .card.HR { color: red; }
+
+main {
+  --cardgap: 5px;
+  --cardheight: 20px;
+}
+
+#message {
+  padding: 5px;
+  text-align: center;
+  width: 60%;
+  margin: 5px auto;
+  border: 1px solid lightgray;
+  border-radius: 5px;
+}
+
+#table {
+  display: flex;
+  gap: 10px;
+  align-items: flex-start;
+}
+

@@ -1,0 +1,51 @@
+
+
+Du kan alltid kolla på lösningen för att få hjälp men fråga gärna i klassen om det är något du inte förstår i guiden.
+
+Använd gärna HTML- och CSS-koden som finns i lösningen.
+
+
+1)
+Studera HTML-koden och skapa konstanter som pekar till relevanta element där.
+
+
+2)
+Koda en funktion message(string) som uppdaterar #message.
+Testa den genom att anropa med något argument.
+Använd den sen där den behövs. Dessa meddelanden förekommer: "Whenever you are ready", "Deck Added", "New Hand Dealt", "Not enough cards...", "Table Resetted"
+
+
+3)
+Koda en funktion renderCard(color, value) som skapar och returnerar ett HTML-element som representerar ett kort. Alltså ett HTML-element som visar kortets färg och värde (se videon för en superenkel variant).
+
+
+4)
+Koda en funktion addDeck() som adderar alla kort i en lek (52 kort) till diven #deck.
+Använd konstanterna Colors och Values för detta.
+Koppla den till relevant event.
+
+
+5)
+Koda en funktion getAvailableCards() som returnerar en array (eller NodeList) av alla HTML-element med klassen .card som finns i #deck. Dvs alla kort som inte har delats ut.
+
+
+6)
+Koda en funktion randomElement(array) som tar emot en array (eller NodeList) och returnerar ett element (slumpmässigt) från den.
+
+
+7)
+Koda en funktion drawHand(n = 5) som tar emot ett heltal (5 om inget argument anges) och:
+  A) skapar en div där vi kan placera alla kort i denna hand
+  B) appendar diven till #hands och ger den korrekt CSS-klass
+  C) Gör detta n Gånger:
+    C1) använder getAvailableCards för att få en array av alla kort som är kvar i leken.
+    C2) använder randomElement för att få ett slumpmässigt kort (HTML-element) från de som finns kvar i leken
+    C3) appendar det kortet till diven vi precis skapade
+Koppla den till relevant event
+
+
+8)
+Koda en funktion reset() som tömmer "bordet".
+Koppla den till relevant event
+
+

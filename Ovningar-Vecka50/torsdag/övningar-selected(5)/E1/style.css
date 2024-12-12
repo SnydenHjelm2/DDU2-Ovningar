@@ -1,0 +1,33 @@
+main {
+    display: flex;
+    gap: 10px;
+}
+
+main div {
+    flex-grow: 1;
+    flex-basis: 0;
+}
+
+#deck {
+    display: grid;
+    grid-template-columns: repeat(10, 1fr);
+}
+
+#hands {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+}
+
+.card {
+    display: grid;
+    grid-template-columns: 1fr;
+    border: 1px solid black;
+}
+
+.card p {
+    justify-self: center;
+}
+
+.red-card {
+    color: red;
+}
